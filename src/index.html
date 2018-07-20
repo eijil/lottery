@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>九宫格抽奖组件</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    .prize-item {
+        width: 150px;
+        height: 150px;
+        background: #333;
+        border: solid 1px #fff;
+        color: #fff;
+        text-align: center;
+        line-height: 150px;
+        font-size: 20px;
+    }
+
+    .prize-item.active {
+        background: #e6603f;
+    }
+
+    .startLottery {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #e6603f;
+        color: #fff;
+        line-height: 150px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .startLottery.disable {
+        background: #ccc;
+    }
+</style>
+
+<body>
+
+    <div id="lotteryContain" class="lottery-contain">
+        <table cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="prize-item" data-index="0">0</td>
+                    <td class="prize-item" data-index="1">1</td>
+                    <td class="prize-item" data-index="2">2</td>
+                </tr>
+                <tr>
+                    <td class="prize-item" data-index="7"> 7</td>
+                    <td>
+                        <a href="javascript:;" class="startLottery">
+                            start
+                        </a>
+                    </td>
+                    <td class="prize-item" data-index="3">3</td>
+                </tr>
+                <tr>
+                    <td class="prize-item" data-index="6">6</td>
+                    <td class="prize-item spec" data-index="5">5</td>
+                    <td class="prize-item" data-index="4">4</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+
+</html>
