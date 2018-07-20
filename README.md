@@ -2,9 +2,9 @@
 
 # JS九宫格抽奖组件
 
-## 使用
+### 使用
 
-### HTML
+#### HTML
 ``` html
     <table cellpadding="0" cellspacing="0">
             <tbody>
@@ -30,26 +30,22 @@
             </tbody>
         </table>
 ```
-### JS
+#### JS
 
 ``` javascript
 var lottery = new Lottery({
-    //默认为false（可用），如果没有抽奖机会可设置为false,则开始按钮不可点击
+    //是否可用，例如没有抽奖机会可设置为true,默认为false（可选）
     disable: false,
-
     onstart: function () {
         //转盘开始可从服务端获取数据，这里用setTimeout模拟
         getPrizeCode().then((code) => {
-            console.log(code);
             //调用stop方法停止转盘
             lottery.stop(code);
         })
     },
     //转盘动画结束
     onstop: function () {
-        //假设抽奖机会用完禁用抽奖功能
-        //lottery.disable = true;
-        console.log('end');
+       //lottery.disable = true;
     }
 });
 
